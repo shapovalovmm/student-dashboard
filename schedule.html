@@ -4,8 +4,99 @@
   <meta charset="UTF-8">
   <meta name="author" content="Шаповалов Максим">
   <title>Мій кабінет</title>
+  <style>
+    body {
+      background-color: #e8f5e9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 2px solid #333;
+      padding: 15px;
+      text-align: center;
+    }
+    thead {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+  </style>
 </head>
 <body>
+<p>Це сторінка розкладу</p>
+<table>
+  <caption><h3>Розклад</h3></caption>
 
+  <thead>
+  <tr>
+    <th>Понеділок</th>
+    <th>Вівторок</th>
+    <th>Середа</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><img src="img/1.jpg" alt="Картинка 1" width="50%" height="50%"></td>
+    <td><img src="img/2.jpg" alt="Картинка 2" width="50%" height="50%"></td>
+    <td><img src="img/3.jpg" alt="Картинка 3" width="50%" height="50%"></td>
+  </tr>
+
+  <tr>
+    <td><a href="https://google.com">Лекція</a></td>
+    <td><a href="https://google.com">Практика</a></td>
+    <td><a href="https://google.com">Лабораторна</a></td>
+  </tr>
+
+  <tr>
+    <td>Математика</td>
+    <td>Фізика</td>
+    <td>Програмування</td>
+  </tr>
+  </tbody>
+</table>
+<table border="1" cellpadding="15" cellspacing="10">
+  <caption><h2>Звіт</h2></caption>
+
+  <colgroup>
+    <col class="group-main" span="1" style="width: 150px;">
+    <col class="group-highlight" span="2">
+    <col style="background-color: #d1ecf1;">
+  </colgroup>
+
+  <thead>
+  <tr style="background-color: #333; color: white;">
+    <th rowspan="2">Категорія</th> <th colspan="2">Період звітності</th> <th rowspan="2">Разом</th>
+  </tr>
+  <tr style="background-color: #555; color: white;">
+    <th>Січень</th>
+    <th>Лютий</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr class="row-left">
+    <td><b>Товари</b></td>
+    <td>1500 грн</td>
+    <td>2100 грн</td>
+    <td rowspan="2" style="vertical-align: middle; text-align: center;">
+      3600 грн </td>
+  </tr>
+
+  <tr class="row-center">
+    <td>Послуги</td>
+    <td>800 грн</td>
+    <td>1200 грн</td>
+  </tr>
+
+  <tr class="row-right">
+    <td colspan="3"><b>Загальна сума зі знижкою:</b></td>
+    <td>3420 грн</td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
