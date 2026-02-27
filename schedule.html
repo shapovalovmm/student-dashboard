@@ -1,102 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Шаповалов Максим">
-  <title>Мій кабінет</title>
-  <style>
-    body {
-      background-color: #e8f5e9;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 2px solid #333;
-      padding: 15px;
-      text-align: center;
-    }
-    thead {
-      background-color: #4CAF50;
-      color: white;
-    }
-
-  </style>
+  <title>Мій кабінет - Розклад</title>
 </head>
-<body>
-<p>Це сторінка розкладу</p>
-<table>
-  <caption><h3>Розклад</h3></caption>
+<body bgcolor="#e8f5e9" link="#0000EE" vlink="#551A8B" alink="#FF0000">
 
-  <thead>
-  <tr>
-    <th>Понеділок</th>
-    <th>Вівторок</th>
-    <th>Середа</th>
+<p align="center">
+  <b>Навігація:</b>
+  <a href="index.html">Головна</a> |
+  <a href="schedule.html">Розклад</a> |
+  <a href="gallery.html">Галерея</a> |
+  <a href="resources.html">Ресурси та матеріали</a>
+</p>
+<hr>
+
+<h2 align="center">Розклад та навантаження</h2>
+
+<table border="2" width="100%" cellpadding="15" cellspacing="0" bordercolor="#333333">
+  <caption><h3>Тижневий розклад</h3></caption>
+  <tr bgcolor="#4CAF50" align="center">
+    <th><font color="white">Понеділок</font></th>
+    <th><font color="white">Вівторок</font></th>
+    <th><font color="white">Середа</font></th>
   </tr>
-  </thead>
-
-  <tbody>
-  <tr>
-    <td><img src="img/1.jpg" alt="Картинка 1" width="50%" height="50%"></td>
-    <td><img src="img/2.jpg" alt="Картинка 2" width="50%" height="50%"></td>
-    <td><img src="img/3.jpg" alt="Картинка 3" width="50%" height="50%"></td>
+  <tr align="center" bgcolor="#ffffff">
+    <td><img src="img/1.jpg" alt="Картинка 1" width="100"></td>
+    <td><img src="img/2.jpg" alt="Картинка 2" width="100"></td>
+    <td><img src="img/3.jpg" alt="Картинка 3" width="100"></td>
   </tr>
-
-  <tr>
-    <td><a href="https://google.com">Лекція</a></td>
-    <td><a href="https://google.com">Практика</a></td>
-    <td><a href="https://google.com">Лабораторна</a></td>
+  <tr align="center" bgcolor="#f9f9f9">
+    <td><a href="https://google.com" target="_blank">Лекція</a></td>
+    <td><a href="https://google.com" target="_blank">Практика</a></td>
+    <td><a href="https://google.com" target="_blank">Лабораторна</a></td>
   </tr>
-
-  <tr>
-    <td>Математика</td>
+  <tr align="center" bgcolor="#ffffff">
+    <td>Вища математика</td>
     <td>Фізика</td>
-    <td>Програмування</td>
+    <td>Програмування (Java)</td>
   </tr>
-  </tbody>
 </table>
-<table border="1" cellpadding="15" cellspacing="10">
-  <caption><h2>Звіт</h2></caption>
 
+<br><br>
+
+<table border="1" cellpadding="15" cellspacing="5" width="100%" bordercolor="#000000">
+  <caption><h2>Розподіл навчального та проєктного навантаження</h2></caption>
   <colgroup>
-    <col class="group-main" span="1" style="width: 150px;">
-    <col class="group-highlight" span="2">
-    <col style="background-color: #d1ecf1;">
+    <col width="40%">
+    <col width="20%" bgcolor="#e0f7fa">
+    <col width="20%" bgcolor="#e0f7fa">
+    <col width="20%" bgcolor="#fff9c4">
   </colgroup>
-
-  <thead>
-  <tr style="background-color: #333; color: white;">
-    <th rowspan="2">Категорія</th> <th colspan="2">Період звітності</th> <th rowspan="2">Разом</th>
+  <tr bgcolor="#333333" align="center">
+    <th rowspan="2"><font color="white">Дисципліна / Активність</font></th>
+    <th colspan="2"><font color="white">Години на тиждень</font></th>
+    <th rowspan="2"><font color="white">Підсумковий контроль</font></th>
   </tr>
-  <tr style="background-color: #555; color: white;">
-    <th>Січень</th>
-    <th>Лютий</th>
+  <tr bgcolor="#555555" align="center">
+    <th><font color="white">Аудиторні</font></th>
+    <th><font color="white">Самостійна</font></th>
   </tr>
-  </thead>
-
-  <tbody>
-  <tr class="row-left">
-    <td><b>Товари</b></td>
-    <td>1500 грн</td>
-    <td>2100 грн</td>
-    <td rowspan="2" style="vertical-align: middle; text-align: center;">
-      3600 грн </td>
+  <tr align="left">
+    <td><b>Java та Spring Framework</b></td>
+    <td align="center">4</td>
+    <td align="center">8</td>
+    <td rowspan="2" align="center" valign="middle">Екзамен та захист коду</td>
   </tr>
-
-  <tr class="row-center">
-    <td>Послуги</td>
-    <td>800 грн</td>
-    <td>1200 грн</td>
+  <tr align="left">
+    <td><b>Вища математика</b></td>
+    <td align="center">4</td>
+    <td align="center">6</td>
   </tr>
-
-  <tr class="row-right">
-    <td colspan="3"><b>Загальна сума зі знижкою:</b></td>
-    <td>3420 грн</td>
+  <tr align="center" bgcolor="#dcedc8">
+    <td colspan="3" align="right"><b>Координація розробки (Сайт доставки їжі):</b></td>
+    <td>Щотижневі спринти</td>
   </tr>
-  </tbody>
 </table>
+
 </body>
 </html>
