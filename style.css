@@ -1,0 +1,129 @@
+body {
+    background-color: #e8f5e9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#main-title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    color: #0000EE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #551A8B;
+}
+
+.highlight {
+    color: #d32f2f !important;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.nav-bar {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #c8e6c9;
+    border-radius: 8px;
+    border: 1px solid #81c784;
+}
+
+ul {
+    list-style-type: square;
+    background-color: #ffffff;
+    margin: 15px 10%;
+    padding: 20px 40px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+}
+
+ol {
+    list-style-type: upper-roman;
+    background-color: #f1f8e9;
+    margin: 15px 10%;
+    padding: 20px 40px;
+    border-left: 5px solid #2196f3;
+    font-weight: bold;
+}
+
+dl {
+    background-color: #fff3e0;
+    margin: 15px 10%;
+    padding: 20px;
+    border: 1px dashed #ff9800;
+}
+
+dt {
+    font-weight: bold;
+    color: #e65100;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 30px;
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+th, td {
+    border: 2px solid #333333;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+.bg-light-blue { background-color: #e0f7fa; }
+.bg-light-yellow { background-color: #fff9c4; }
+.bg-dark { background-color: #333333; color: white; }
+.bg-darker { background-color: #555555; color: white; }
+.bg-green { background-color: #dcedc8; }

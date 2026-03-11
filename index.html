@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Шаповалов Максим">
   <title>Мій кабінет</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    a {
+      color: #ff5722;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<p align="center">
+<body>
+
+<div class="nav-bar">
   <b>Навігація:</b>
   <a href="index.html">Головна</a> |
   <a href="schedule.html">Розклад</a> |
   <a href="gallery.html">Галерея</a> |
   <a href="resources.html">Ресурси та матеріали</a> |
-  <a href="https://youtu.be/dQw4w9WgXcQ?si=hio6fum0ixhf3qzK" target="_blank"><font color="red">Важливе</font></a> |
-  <a href="#footer"><font color="forestgreen">Вниз</font></a>
-</p>
+  <a href="https://youtu.be/dQw4w9WgXcQ?si=hio6fum0ixhf3qzK" target="_blank" class="highlight">Важливе</a> |
+  <a href="#footer" style="color: forestgreen;">Вниз</a>
+</div>
 <hr>
 
-<h1 align="center">Головна сторінка</h1>
+<h1 id="main-title">Головна сторінка</h1>
 
 <h2>Про мене</h2>
-<p>Привіт! Мене звати <b>Максим Шаповалов</b>, мені 20 років, і я родом із Кривого Рогу. Раніше я мав досвід навчання в ІПСА, який дав мені міцну <i>математичну базу </i>. Зараз мій основний фокус — це програмування: я поглиблено вивчаю <b>Java</b> та фреймворк <b>Spring</b>.</p>
-
+<p style="background-color: #bbdefb; padding: 15px; border-left: 5px solid #1976d2; font-size: 18px;">
+  Привіт! Мене звати <b>Максим Шаповалов</b>, мені 20 років, і я родом із Кривого Рогу. Раніше я мав досвід навчання в ІПСА, який дав мені міцну <i>математичну базу</i>. Зараз мій основний фокус — це програмування: я поглиблено вивчаю <span class="highlight">Java</span> та фреймворк <span class="highlight">Spring</span>.
+</p>
 <p>У вільний час я дуже люблю грати в шахи. Брав участь у двох університетських турнірах з шахів і маю рейтинг 1300 у рапіді. Крім того, я обожнюю готувати.</p>
 
 <hr>
 <h2>Попередній перегляд ресурсів</h2>
-<p align="center">
-  <iframe src="resources.html" width="80%" height="400" title="Опис вмісту" frameborder="2"></iframe>
-</p>
+<div style="text-align: center;">
+  <iframe src="resources.html" width="80%" height="400" title="Опис вмісту" style="border: 2px solid #333;"></iframe>
+</div>
 
-<br><br><br><br><br><br><br><br>
-<p id="footer" align="center"><b>© 2026 Шаповалов Максим. Нижня частина сторінки.</b></p>
+<br><br><br><br>
+<p id="footer" style="text-align: center;"><b>© 2026 Шаповалов Максим. Нижня частина сторінки.</b></p>
 </body>
 </html>

@@ -4,38 +4,39 @@
   <meta charset="UTF-8">
   <meta name="author" content="Шаповалов Максим">
   <title>Мій кабінет - Розклад</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#e8f5e9" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<body>
 
-<p align="center">
+<div class="nav-bar">
   <b>Навігація:</b>
   <a href="index.html">Головна</a> |
   <a href="schedule.html">Розклад</a> |
   <a href="gallery.html">Галерея</a> |
   <a href="resources.html">Ресурси та матеріали</a>
-</p>
+</div>
 <hr>
 
-<h2 align="center">Розклад та навантаження</h2>
+<h2>Розклад та навантаження</h2>
 
-<table border="2" width="100%" cellpadding="15" cellspacing="0" bordercolor="#333333">
-  <caption><h3>Тижневий розклад</h3></caption>
-  <tr bgcolor="#4CAF50" align="center">
-    <th><font color="white">Понеділок</font></th>
-    <th><font color="white">Вівторок</font></th>
-    <th><font color="white">Середа</font></th>
+<table>
+  <caption>Тижневий розклад</caption>
+  <tr>
+    <th>Понеділок</th>
+    <th>Вівторок</th>
+    <th>Середа</th>
   </tr>
-  <tr align="center" bgcolor="#ffffff">
+  <tr>
     <td><img src="img/1.jpg" alt="Картинка 1" width="100"></td>
     <td><img src="img/2.jpg" alt="Картинка 2" width="100"></td>
     <td><img src="img/3.jpg" alt="Картинка 3" width="100"></td>
   </tr>
-  <tr align="center" bgcolor="#f9f9f9">
+  <tr>
     <td><a href="https://google.com" target="_blank">Лекція</a></td>
     <td><a href="https://google.com" target="_blank">Практика</a></td>
     <td><a href="https://google.com" target="_blank">Лабораторна</a></td>
   </tr>
-  <tr align="center" bgcolor="#ffffff">
+  <tr>
     <td>Вища математика</td>
     <td>Фізика</td>
     <td>Програмування (Java)</td>
@@ -44,36 +45,35 @@
 
 <br><br>
 
-<table border="1" cellpadding="15" cellspacing="5" width="100%" bordercolor="#000000">
-  <caption><h2>Розподіл навчального та проєктного навантаження</h2></caption>
+<table>
+  <caption>Розподіл навчального та проєктного навантаження</caption>
   <colgroup>
-    <col width="40%">
-    <col width="20%" bgcolor="#e0f7fa">
-    <col width="20%" bgcolor="#e0f7fa">
-    <col width="20%" bgcolor="#fff9c4">
+    <col style="width: 40%;">
+    <col class="bg-light-blue" style="width: 20%;">
+    <col class="bg-light-blue" style="width: 20%;">
+    <col class="bg-light-yellow" style="width: 20%;">
   </colgroup>
-  <tr bgcolor="#333333" align="center">
-    <th rowspan="2"><font color="white">Дисципліна / Активність</font></th>
-    <th colspan="2"><font color="white">Години на тиждень</font></th>
-    <th rowspan="2"><font color="white">Підсумковий контроль</font></th>
+  <tr class="bg-dark">
+    <th rowspan="2">Дисципліна / Активність</th>
+    <th colspan="2">Години на тиждень</th>
+    <th rowspan="2">Підсумковий контроль</th>
   </tr>
-  <tr bgcolor="#555555" align="center">
-    <th><font color="white">Аудиторні</font></th>
-    <th><font color="white">Самостійна</font></th>
+  <tr class="bg-darker">
+    <th>Аудиторні</th>
+    <th>Самостійна</th>
   </tr>
-  <tr align="left">
-    <td><b>Java та Spring Framework</b></td>
-    <td align="center">4</td>
-    <td align="center">8</td>
-    <td rowspan="2" align="center" valign="middle">Екзамен та захист коду</td>
+  <tr>
+    <td style="text-align: left;"><b>Java та Spring Framework</b></td>
+    <td rowspan="2">4</td>
+    <td>8</td>
+    <td rowspan="2">Екзамен та захист коду</td>
   </tr>
-  <tr align="left">
-    <td><b>Вища математика</b></td>
-    <td align="center">4</td>
-    <td align="center">6</td>
+  <tr>
+    <td style="text-align: left;"><b>Вища математика</b></td>
+    <td>6</td>
   </tr>
-  <tr align="center" bgcolor="#dcedc8">
-    <td colspan="3" align="right"><b>Координація розробки (Сайт доставки їжі):</b></td>
+  <tr class="bg-green">
+    <td colspan="3" style="text-align: right;"><b>Координація розробки (Сайт доставки їжі):</b></td>
     <td>Щотижневі спринти</td>
   </tr>
 </table>
