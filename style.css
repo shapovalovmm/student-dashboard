@@ -1,3 +1,36 @@
+
+/* Контекстний селектор  */
+.nav-bar a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: #ffcc80;
+    text-decoration: none;
+}
+
+/* Дочірній селектор */
+body > h2 {
+    border-bottom: 3px dashed #ff9800;
+    padding-bottom: 10px;
+    width: 50%;
+    margin: 0 auto 20px auto;
+}
+
+/* Сусідній селектор */
+h2 + p {
+    font-size: 1.1em;
+    color: #424242;
+    text-align: justify;
+    box-shadow: -4px 0 0 #ff5722;
+    padding-left: 15px;
+}
+
 body {
     background-color: #e8f5e9;
     font-family: Arial, sans-serif;
