@@ -14,6 +14,13 @@
     text-decoration: none;
 }
 
+body h2 {
+    border-bottom: 3px dashed green;
+    padding-bottom: 10px;
+    width: 50%;
+    margin: 0 auto 20px auto;
+}
+
 /* Дочірній селектор */
 body > h2 {
     border-bottom: 3px dashed #ff9800;
@@ -21,6 +28,8 @@ body > h2 {
     width: 50%;
     margin: 0 auto 20px auto;
 }
+
+
 
 /* Сусідній селектор */
 h2 + p {
@@ -153,6 +162,76 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #e0f7fa;
+}
+
+a:link {
+    color: #1976d2;
+    text-decoration: none;
+}
+a:visited {
+    color: #551A8B;
+}
+a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+a:active {
+    color: #d32f2f;
+}
+
+
+ul li:first-child {
+    font-weight: bold;
+    color: #d32f2f;
+    list-style-type: disc;
+}
+
+.nav-bar a:first-child {
+    border-bottom: 3px solid #ff5722;
+}
+
+body h2::before {
+    content: "📌 ";
+}
+
+.highlight::after {
+    content: " ✨";
+    font-size: 0.9em;
+}
+
+.profile-card {
+    position: relative;
+    border: 2px dashed #4CAF50;
+    padding: 15px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #d32f2f;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.profile-img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid #81c784;
 }
 
 .bg-light-blue { background-color: #e0f7fa; }
