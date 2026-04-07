@@ -46,6 +46,51 @@
     Зазирніть у розділ <a href="resources.html">Ресурси</a>, щоб побачити мої поточні завдання!
   </p>
 </div>
+
+<hr>
+<h2>Панель JavaScript завдань</h2>
+<div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; border: 1px solid #ffb74d;">
+
+  <p>
+    <script>
+      document.write("<b>Цей текст виведено за допомогою <i>document.write</i> безпосередньо під час завантаження сторінки.</b>");
+    </script>
+  </p>
+
+  <p>Натисніть на кнопки нижче, щоб протестувати функціонал:</p>
+
+  <button onclick="internalScriptDemo()" style="padding: 10px; margin: 5px; cursor: pointer;">1. Внутрішній скрипт (alert, prompt)</button>
+  <button onclick="startUserDialog()" style="padding: 10px; margin: 5px; cursor: pointer;">2. Діалог з користувачем (while, if)</button>
+
+  <button onclick="showDeveloperInfo('Шаповалов', 'Максим')" style="padding: 10px; margin: 5px; cursor: pointer;">3. Інфо про розробника</button>
+
+  <button onclick="compareStrings('Програмування на Java', 'Шахи')" style="padding: 10px; margin: 5px; cursor: pointer;">4. Порівняти рядки</button>
+  <button onclick="changeBgFor30Seconds()" style="padding: 10px; margin: 5px; cursor: pointer;">5. Змінити фон (BOM / DOM)</button>
+  <button onclick="redirectToGallery()" style="padding: 10px; margin: 5px; cursor: pointer;">6. Перенаправлення (Location)</button>
+  <button onclick="runDomManipulations()" style="padding: 10px; margin: 5px; cursor: pointer;">7. DOM Маніпуляції (Створення, заміна, видалення)</button>
+
+</div>
+
+<script>
+  function internalScriptDemo() {
+    // Застосувати функції alert, prompt, confirm. Оформити внутрішніми скриптами.
+    alert("Вітаю! Зараз ми перевіримо базові вікна браузера.");
+
+    let userOpinion = prompt("Оцініть свій настрій від 1 до 10:", "10");
+
+    if (userOpinion !== null) {
+      let isTrue = confirm(`Ваш настрій дійсно на ${userOpinion}?`);
+      if(isTrue) {
+        alert("Чудово! Продовжуємо роботу.");
+      } else {
+        alert("Нічого, програмування підніме настрій!");
+      }
+    }
+  }
+</script>
+
+<script src="script.js"></script>
+
 <hr>
 <h2>Попередній перегляд ресурсів</h2>
 <div style="text-align: center;">

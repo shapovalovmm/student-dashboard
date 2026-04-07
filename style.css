@@ -164,6 +164,8 @@ tr:hover {
     background-color: #e0f7fa;
 }
 
+
+
 a:link {
     color: #1976d2;
     text-decoration: none;
@@ -179,15 +181,10 @@ a:active {
     color: #d32f2f;
 }
 
-
 ul li:first-child {
     font-weight: bold;
     color: #d32f2f;
     list-style-type: disc;
-}
-
-.nav-bar a:first-child {
-    border-bottom: 3px solid #ff5722;
 }
 
 body h2::before {
@@ -212,8 +209,8 @@ body h2::before {
 
 .badge {
     position: absolute;
-    top: -15px;
-    right: -10px;
+    top: 5px;
+    right: 5px;
     background-color: #d32f2f;
     color: white;
     padding: 5px 15px;
