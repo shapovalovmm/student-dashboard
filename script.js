@@ -135,3 +135,110 @@ function runDomManipulations() {
 
     alert("DOM маніпуляції виконано!");
 }
+
+
+// ==========================================
+// ЗАВДАННЯ 1: Способи призначення обробників
+// ==========================================
+
+// 1. Через HTML-атрибут (onclick="handlerAttr()")
+function handlerAttr() {
+    alert("Обробник спрацював через HTML-атрибут onclick!");
+}
+
+// 2. Через властивість DOM-елемента
+let btnProp = document.getElementById("btnProp");
+btnProp.onclick = function() {
+    alert("Обробник спрацював через властивість елемента (btn.onclick)!");
+};
+
+// 3. Через addEventListener (можна вішати декілька функцій на одну подію)
+let btnMulti = document.getElementById("btnMulti");
+function firstHandler() {
+    console.log("Спрацював ПЕРШИЙ обробник через addEventListener");
+}
+function secondHandler() {
+    alert("Спрацював ДРУГИЙ обробник! Подивись у консоль (F12) для першого.");
+}
+btnMulti.addEventListener('click', firstHandler);
+btnMulti.addEventListener('click', secondHandler);
+
+// 4. Об'єкт-обробник (використання методу handleEvent)
+let btnObj = document.getElementById("btnObj");
+let btnObjRemove = document.getElementById("btnObjRemove");
+
+let eventObj = {
+    handleEvent(event) {
+        // Виводимо елемент, на якому спрацював обробник
+        alert(`Об'єкт обробив подію: ${event.type}\nНа елементі: ${event.currentTarget.tagName}\nID: ${event.currentTarget.id}`);
+    }
+};
+
+// Додаємо об'єкт як обробник
+btnObj.addEventListener('click', eventObj);
+
+// Видаляємо об'єкт-обробник
+btnObjRemove.onclick = function() {
+    btnObj.removeEventListener('click', eventObj);
+    alert("Об'єкт-обробник успішно видалено! Кнопка 4 більше не реагуватиме.");
+};
+
+
+// ==========================================
+// ЗАВДАННЯ 2: Спливання, Делегування, Поведінка
+// ==========================================
+
+// 1. Підсвічування елементів списку (Делегування подій)
+let delegationList = document.getElementById('delegationList');
+
+// Вішаємо ОДИН обробник на весь <ul>, а не на кожен <li>
+delegationList.onclick = function(event) {
+    // event.target - це конкретний елемент, на який клікнули
+    let target = event.target;
+
+    // Перевіряємо, чи клік був саме по тегу LI
+    if (target.tagName === 'LI') {
+        // Змінюємо колір фону для підсвічування
+        if (target.style.backgroundColor === 'yellow') {
+            target.style.backgroundColor = ''; // скидаємо
+        } else {
+            target.style.backgroundColor = 'yellow'; // підсвічуємо
+        }
+    }
+};
+
+// 2. Створення меню (Атрибути data-*)
+// Створюємо клас, методи якого відповідають значенням атрибута data-action
+class Menu {
+    constructor(elem) {
+        this._elem = elem;
+        // Прив'язуємо контекст this, щоб він вказував на об'єкт Menu
+        elem.onclick = this.onClick.bind(this);
+    }
+
+    save() { alert('Викликано метод: Збереження даних'); }
+    load() { alert('Викликано метод: Завантаження даних'); }
+    clear() { alert('Викликано метод: Очищення екрану'); }
+
+    onClick(event) {
+        // Отримуємо значення атрибута data-action (наприклад "save")
+        let action = event.target.dataset.action;
+        if (action) {
+            // Викликаємо відповідний метод об'єкта
+            this[action]();
+        }
+    }
+}
+
+// Ініціалізуємо меню
+let menuElem = document.getElementById('actionMenu');
+new Menu(menuElem);
+
+// 3. Патерн "Поведінка" (Behavior)
+// Обробник вішається на весь документ. Він "слухає" всі кліки і реагує лише на ті елементи, які мають спеціальний атрибут data-behavior
+document.addEventListener('click', function(event) {
+    // Перевіряємо, чи має елемент атрибут data-behavior="greeting"
+    if (event.target.dataset.behavior === 'greeting') {
+        alert("Привіт! Ця поведінка додана автоматично завдяки глобальному делегуванню та атрибуту data-behavior.");
+    }
+});

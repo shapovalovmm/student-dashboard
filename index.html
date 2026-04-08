@@ -89,7 +89,7 @@
   }
 </script>
 
-<script src="script.js"></script>
+
 
 <hr>
 <h2>Попередній перегляд ресурсів</h2>
@@ -97,7 +97,44 @@
   <iframe src="resources.html" width="80%" height="400" title="Опис вмісту" style="border: 2px solid #333;"></iframe>
 </div>
 
+<hr>
+<h2>Лабораторна: Події та Делегування</h2>
+<div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; border: 1px solid #90caf9;">
+
+  <h3>Завдання 1: Обробники подій</h3>
+  <button onclick="handlerAttr()" style="padding: 5px;">1. Через атрибут</button>
+  <button id="btnProp" style="padding: 5px;">2. Через властивість</button>
+  <button id="btnMulti" style="padding: 5px;">3. addEventListener (Два обробники)</button>
+  <br><br>
+  <button id="btnObj" style="padding: 5px;">4. Об'єкт-обробник (Додати)</button>
+  <button id="btnObjRemove" style="padding: 5px;">Видалити об'єкт-обробник</button>
+
+  <hr style="border-top: 1px dashed #2196f3;">
+
+  <h3>Завдання 2: Делегування та Поведінка</h3>
+
+  <h4>Список завдань (Клікни на елемент)</h4>
+  <ul id="delegationList" style="cursor: pointer; user-select: none;">
+    <li>Вивчити принципи ООП в Java</li>
+    <li>Налаштувати Spring Security</li>
+    <li>Зверстати сторінку розкладу</li>
+    <li>Підготуватись до шахового турніру</li>
+  </ul>
+
+  <h4>Меню дій (Атрибути data-action)</h4>
+  <div id="actionMenu" style="margin-bottom: 15px;">
+    <button data-action="save">Зберегти прогрес</button>
+    <button data-action="load">Завантажити дані</button>
+    <button data-action="clear">Очистити</button>
+  </div>
+
+  <h4>Патерн "Поведінка" (Behavior)</h4>
+  <button data-behavior="greeting">Привітатись</button>
+  <button data-behavior="greeting">Ще одне привітання</button>
+
+</div>
 <br><br><br><br>
 <p id="footer" style="text-align: center;"><b>© 2026 Шаповалов Максим. Нижня частина сторінки.</b></p>
+<script src="script.js" defer></script>
 </body>
 </html>
