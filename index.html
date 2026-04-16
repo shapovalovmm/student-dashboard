@@ -133,6 +133,39 @@
   <button data-behavior="greeting">Ще одне привітання</button>
 
 </div>
+
+
+<hr>
+<h2>Лабораторна: Події миші та Drag-and-Drop</h2>
+<div style="background-color: #fce4ec; padding: 20px; border-radius: 8px; border: 1px solid #f48fb1; position: relative;">
+
+    <h3>Завдання 1: Зміна стилів (mouseover, mouseout)</h3>
+    <p>Наведи мишу на картки нижче. Відкрий консоль (F12), щоб побачити роботу <b>relatedTarget</b>.</p>
+
+    <div id="hoverZone" style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <div class="hover-card" style="padding: 20px; border: 2px solid #ccc; background: white; cursor: pointer; transition: 0.3s;">
+            <b>Технологія 1</b><br>Spring Boot
+        </div>
+        <div class="hover-card" style="padding: 20px; border: 2px solid #ccc; background: white; cursor: pointer; transition: 0.3s;">
+            <b>Технологія 2</b><br>Spring Security
+        </div>
+        <div class="hover-card" style="padding: 20px; border: 2px solid #ccc; background: white; cursor: pointer; transition: 0.3s;">
+            <b>Технологія 3</b><br>Hibernate/JPA
+        </div>
+    </div>
+
+    <hr style="border-top: 1px dashed #e91e63;">
+
+    <h3>Завдання 2: Перетягування (Drag-and-Drop)</h3>
+    <p>Затисни ліву кнопку миші на картці завдання і перетягни її в будь-яке місце екрану.</p>
+
+    <div id="draggableTask" style="width: 150px; padding: 15px; background-color: #ffb74d; border: 2px solid #e65100; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: grab; text-align: center; font-weight: bold; user-select: none;">
+        📌 Завдання Jira<br>
+        <span style="font-size: 12px; font-weight: normal;">Налаштувати JWT</span>
+    </div>
+
+</div>
+
 <br><br><br><br>
 <p id="footer" style="text-align: center;"><b>© 2026 Шаповалов Максим. Нижня частина сторінки.</b></p>
 <script src="script.js" defer></script>

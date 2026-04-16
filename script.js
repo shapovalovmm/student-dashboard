@@ -242,3 +242,99 @@ document.addEventListener('click', function(event) {
         alert("Привіт! Ця поведінка додана автоматично завдяки глобальному делегуванню та атрибуту data-behavior.");
     }
 });
+
+
+// ==========================================
+// ЛАБОРАТОРНА: mouseover, mouseout та target/relatedTarget
+// ==========================================
+let hoverZone = document.getElementById('hoverZone');
+
+hoverZone.onmouseover = function(event) {
+    // event.target - елемент, НА який ми зайшли
+    let target = event.target;
+    // event.relatedTarget - елемент, З якого ми прийшли
+    let relatedTarget = event.relatedTarget;
+
+    // Перевіряємо, чи ми навели саме на картку (через метод closest)
+    let card = target.closest('.hover-card');
+
+    if (card) {
+        // Змінюємо стиль при наведенні
+        card.style.backgroundColor = '#81c784'; // зелений колір
+        card.style.transform = 'scale(1.05)';
+        card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+
+        console.log(`[MouseOver] Зайшли НА:`, card.innerText.replace('\n', ' '));
+        if (relatedTarget) {
+            console.log(`[MouseOver] Прийшли З:`, relatedTarget.tagName);
+        }
+    }
+};
+
+hoverZone.onmouseout = function(event) {
+    // При mouseout навпаки: target - звідки йдемо, relatedTarget - куди переходимо
+    let target = event.target;
+    let card = target.closest('.hover-card');
+
+    if (card) {
+        // Повертаємо початкові стилі
+        card.style.backgroundColor = 'white';
+        card.style.transform = 'scale(1)';
+        card.style.boxShadow = 'none';
+    }
+};
+
+// ==========================================
+// ЛАБОРАТОРНА: Drag-and-Drop (mousedown, mousemove, mouseup)
+// ==========================================
+let draggableTask = document.getElementById('draggableTask');
+
+draggableTask.onmousedown = function(event) {
+    // 1. Змінюємо курсор для візуального ефекту захоплення
+    draggableTask.style.cursor = 'grabbing';
+
+    // 2. Вираховуємо зміщення (відстань від кліку до країв елемента).
+    // Це потрібно, щоб елемент не "стрибав" центром під мишку,
+    // а тримався саме за те місце, де ти клікнув.
+    let shiftX = event.clientX - draggableTask.getBoundingClientRect().left;
+    let shiftY = event.clientY - draggableTask.getBoundingClientRect().top;
+
+    // 3. Змінюємо позиціювання на absolute, щоб елемент міг літати над усім
+    draggableTask.style.position = 'absolute';
+    draggableTask.style.zIndex = 1000;
+
+    // Переміщуємо елемент безпосередньо в body, щоб він не обрізався межами батьківських блоків
+    document.body.append(draggableTask);
+
+    // Функція, яка рухає елемент під координати миші
+    function moveAt(pageX, pageY) {
+        draggableTask.style.left = pageX - shiftX + 'px';
+        draggableTask.style.top = pageY - shiftY + 'px';
+    }
+
+    // Переміщуємо під координати відразу після кліку
+    moveAt(event.pageX, event.pageY);
+
+    // 4. Обробник руху миші (mousemove). Вішаємо його на весь document,
+    // бо миша може рухатись дуже швидко і "вилетіти" за межі самої картки
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+    }
+    document.addEventListener('mousemove', onMouseMove);
+
+    // 5. Відпускання кнопки миші (mouseup)
+    draggableTask.onmouseup = function() {
+        // Відкріплюємо подію руху миші
+        document.removeEventListener('mousemove', onMouseMove);
+        // Скидаємо обробник mouseup, щоб він не висів у пам'яті
+        draggableTask.onmouseup = null;
+        // Повертаємо курсор
+        draggableTask.style.cursor = 'grab';
+    };
+};
+
+// 6. Вимикаємо вбудований у браузер Drag-and-Drop,
+// щоб він не конфліктував з нашим власним скриптом
+draggableTask.ondragstart = function() {
+    return false;
+};
