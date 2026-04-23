@@ -58,38 +58,7 @@
   </p>
 
   <p>Натисніть на кнопки нижче, щоб протестувати функціонал:</p>
-
-  <button onclick="internalScriptDemo()" style="padding: 10px; margin: 5px; cursor: pointer;">1. Внутрішній скрипт (alert, prompt)</button>
-  <button onclick="startUserDialog()" style="padding: 10px; margin: 5px; cursor: pointer;">2. Діалог з користувачем (while, if)</button>
-
-  <button onclick="showDeveloperInfo('Шаповалов', 'Максим')" style="padding: 10px; margin: 5px; cursor: pointer;">3. Інфо про розробника</button>
-
-  <button onclick="compareStrings('Програмування на Java', 'Шахи')" style="padding: 10px; margin: 5px; cursor: pointer;">4. Порівняти рядки</button>
-  <button onclick="changeBgFor30Seconds()" style="padding: 10px; margin: 5px; cursor: pointer;">5. Змінити фон (BOM / DOM)</button>
-  <button onclick="redirectToGallery()" style="padding: 10px; margin: 5px; cursor: pointer;">6. Перенаправлення (Location)</button>
-  <button onclick="runDomManipulations()" style="padding: 10px; margin: 5px; cursor: pointer;">7. DOM Маніпуляції (Створення, заміна, видалення)</button>
-
 </div>
-
-<script>
-  function internalScriptDemo() {
-    // Застосувати функції alert, prompt, confirm. Оформити внутрішніми скриптами.
-    alert("Вітаю! Зараз ми перевіримо базові вікна браузера.");
-
-    let userOpinion = prompt("Оцініть свій настрій від 1 до 10:", "10");
-
-    if (userOpinion !== null) {
-      let isTrue = confirm(`Ваш настрій дійсно на ${userOpinion}?`);
-      if(isTrue) {
-        alert("Чудово! Продовжуємо роботу.");
-      } else {
-        alert("Нічого, програмування підніме настрій!");
-      }
-    }
-  }
-</script>
-
-
 
 <hr>
 <h2>Попередній перегляд ресурсів</h2>
@@ -98,40 +67,43 @@
 </div>
 
 <hr>
-<h2>Лабораторна: Події та Делегування</h2>
+<h2 id="lab-section">Лабораторна: Події та Делегування у Dashboard</h2>
 <div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; border: 1px solid #90caf9;">
 
-  <h3>Завдання 1: Обробники подій</h3>
-  <button onclick="handlerAttr()" style="padding: 5px;">1. Через атрибут</button>
-  <button id="btnProp" style="padding: 5px;">2. Через властивість</button>
-  <button id="btnMulti" style="padding: 5px;">3. addEventListener (Два обробники)</button>
-  <br><br>
-  <button id="btnObj" style="padding: 5px;">4. Об'єкт-обробник (Додати)</button>
-  <button id="btnObjRemove" style="padding: 5px;">Видалити об'єкт-обробник</button>
+  <h3>Завдання 1: Способи призначення обробників</h3>
+  <div class="control-panel">
+    <button onclick="handlerAttr()" style="padding: 10px;">1. Оповіщення (Атрибут)</button>
+    <button id="btnProp" style="padding: 10px;">2. Статус (Властивість)</button>
+    <button id="btnMulti" style="padding: 10px;">3. Multi-log (addEventListener)</button>
+    <br><br>
+    <button id="btnObj" style="padding: 10px;">4. Відстежити об'єкт (handleEvent)</button>
+    <button id="btnObjRemove" style="padding: 10px;">Видалити відстеження</button>
+  </div>
 
   <hr style="border-top: 1px dashed #2196f3;">
 
   <h3>Завдання 2: Делегування та Поведінка</h3>
 
-  <h4>Список завдань (Клікни на елемент)</h4>
-  <ul id="delegationList" style="cursor: pointer; user-select: none;">
-    <li>Вивчити принципи ООП в Java</li>
-    <li>Налаштувати Spring Security</li>
-    <li>Зверстати сторінку розкладу</li>
-    <li>Підготуватись до шахового турніру</li>
+  <h4>Менеджер завдань (Клікніть для вибору)</h4>
+  <ul id="taskDelegationList" style="cursor: pointer; user-select: none;">
+    <li>Повторити принципи Spring Security</li>
+    <li>Розібрати архітектуру Hibernate в проєкті доставки</li>
+    <li>Проаналізувати партію з останнього шахового турніру</li>
+    <li>Оновити документацію в Student Dashboard</li>
   </ul>
 
-  <h4>Меню дій (Атрибути data-action)</h4>
-  <div id="actionMenu" style="margin-bottom: 15px;">
-    <button data-action="save">Зберегти прогрес</button>
-    <button data-action="load">Завантажити дані</button>
-    <button data-action="clear">Очистити</button>
+  <h4>Дії над органайзером (data-action)</h4>
+  <div id="dashboardMenu" style="margin-bottom: 15px; display: flex; gap: 10px;">
+    <button data-action="save">💾 Зберегти плани</button>
+    <button data-action="load">📂 Завантажити базу</button>
+    <button data-action="clear">🗑️ Очистити кеш</button>
   </div>
 
-  <h4>Патерн "Поведінка" (Behavior)</h4>
-  <button data-behavior="greeting">Привітатись</button>
-  <button data-behavior="greeting">Ще одне привітання</button>
-
+  <h4>Автоматична поведінка (Behavior)</h4>
+  <div style="display: flex; gap: 10px;">
+    <button data-behavior="motivate">Отримати мотивацію</button>
+    <button data-behavior="motivate">Ще одна порада</button>
+  </div>
 </div>
 
 
